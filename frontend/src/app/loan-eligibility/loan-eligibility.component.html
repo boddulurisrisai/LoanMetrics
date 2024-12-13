@@ -29,24 +29,34 @@
         <div class="form-group">
             <label for="annualIncome">Annual Income</label>
             <input type="number" id="annualIncome" name="annualIncome" [(ngModel)]="annualIncome" required
-                class="form-control" placeholder="Enter annual income" />
+                class="form-control" placeholder="Enter annual income" [min]="1" />
             <div *ngIf="loanForm.submitted && !annualIncome" class="error-message">Annual income is required.</div>
+            <div *ngIf="loanForm.submitted && (annualIncome === undefined || annualIncome <= 0)" class="error-message">
+                Annual income must be a positive number.
+            </div>
         </div>
 
         <!-- Debts -->
         <div class="form-group">
             <label for="debts">Total Debts</label>
             <input type="number" id="debts" name="debts" [(ngModel)]="debts" required class="form-control"
-                placeholder="Enter total debts" />
+                placeholder="Enter total debts" [min]="1" />
             <div *ngIf="loanForm.submitted && !debts" class="error-message">Debts are required.</div>
+            <div *ngIf="loanForm.submitted && (debts === undefined || debts <= 0)" class="error-message">
+                Total debts must be a positive number.
+            </div>
         </div>
 
         <!-- Credit Score -->
         <div class="form-group">
             <label for="creditScore">Credit Score</label>
             <input type="number" id="creditScore" name="creditScore" [(ngModel)]="creditScore" required
-                class="form-control" placeholder="Enter credit score" />
-            <div *ngIf="loanForm.submitted && !creditScore" class="error-message">Credit score is required.</div>
+                class="form-control" placeholder="Enter credit score" [min]="300" [max]="850" />
+            <div *ngIf="loanForm.submitted && (creditScore === undefined || creditScore < 300 || creditScore > 850)"
+                class="error-message">
+                Credit score must be between 300 and 850.
+            </div>
+
         </div>
 
         <!-- Employment Status -->
@@ -74,7 +84,8 @@
         </div>
 
         <!-- Submit Button -->
-        <button type="submit" [disabled]="!loanForm.form.valid" class="btn btn-primary">Submit</button>
+        <button type="submit" [disabled]="!loanForm.valid" class="btn btn-primary">Submit</button>
+
     </form>
 
     <!-- Eligibility Result -->

@@ -4,6 +4,7 @@ import com.example.loanmanagement.entity.Customer;
 import com.example.loanmanagement.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -17,12 +18,18 @@ public class LoanEligibilityService {
         this.customerRepository = customerRepository;
     }
 
-    // Method to check if a customer exists by first name and last name
+    // Method to fetch customer by first name and last name
     public Optional<Customer> getCustomerByName(String firstName, String lastName) {
         return customerRepository.findByFirstNameAndLastName(firstName, lastName);
     }
 
-    // Loan eligibility check
+    // Method to update the credit score using custom query
+    @Transactional
+    public void updateCustomerCreditScore(String firstName, String lastName, int newCreditScore) {
+        customerRepository.updateCreditScoreByName(firstName, lastName, newCreditScore);
+    }
+
+    // Loan eligibility check logic
     public boolean checkLoanEligibility(Customer customer) {
         // Loan eligibility criteria
         if (customer.getCreditScore() < 650) {

@@ -29,63 +29,34 @@
         <div class="form-group">
             <label for="annualIncome">Annual Income</label>
             <input type="number" id="annualIncome" name="annualIncome" [(ngModel)]="annualIncome" required
-                class="form-control" placeholder="Enter annual income" [min]="1" />
+                class="form-control" placeholder="Enter annual income" />
             <div *ngIf="loanForm.submitted && !annualIncome" class="error-message">Annual income is required.</div>
-            <div *ngIf="loanForm.submitted && (annualIncome === undefined || annualIncome <= 0)" class="error-message">
-                Annual income must be a positive number.
-            </div>
         </div>
 
         <!-- Debts -->
         <div class="form-group">
             <label for="debts">Total Debts</label>
             <input type="number" id="debts" name="debts" [(ngModel)]="debts" required class="form-control"
-                placeholder="Enter total debts" [min]="1" />
+                placeholder="Enter total debts" />
             <div *ngIf="loanForm.submitted && !debts" class="error-message">Debts are required.</div>
-            <div *ngIf="loanForm.submitted && (debts === undefined || debts <= 0)" class="error-message">
-                Total debts must be a positive number.
-            </div>
         </div>
 
         <!-- Credit Score -->
         <div class="form-group">
             <label for="creditScore">Credit Score</label>
             <input type="number" id="creditScore" name="creditScore" [(ngModel)]="creditScore" required
-                class="form-control" placeholder="Enter credit score" [min]="300" [max]="850" />
-            <div *ngIf="loanForm.submitted && (creditScore === undefined || creditScore < 300 || creditScore > 850)"
-                class="error-message">
-                Credit score must be between 300 and 850.
-            </div>
-
+                class="form-control" placeholder="Enter credit score" />
+            <div *ngIf="loanForm.submitted && !creditScore" class="error-message">Credit score is required.</div>
         </div>
 
         <!-- Employment Status -->
-        <div class="form-group employment-row">
-            <label>Employment Status</label>
-            <div class="employment-options">
-                <div class="employment-option">
-                    <input type="radio" id="employed" name="employmentStatus" [(ngModel)]="employmentStatus"
-                        value="Employed" required />
-                    <label for="employed">Employed</label>
-                </div>
-                <div class="employment-option">
-                    <input type="radio" id="selfEmployed" name="employmentStatus" [(ngModel)]="employmentStatus"
-                        value="Self Employed" />
-                    <label for="selfEmployed">Self Employed</label>
-                </div>
-                <div class="employment-option">
-                    <input type="radio" id="unemployed" name="employmentStatus" [(ngModel)]="employmentStatus"
-                        value="Unemployed" />
-                    <label for="unemployed">Unemployed</label>
-                </div>
-            </div>
-            <div *ngIf="loanForm.submitted && !employmentStatus" class="error-message">Employment status is required.
-            </div>
+        <div class="form-group">
+            <input type="checkbox" id="employmentStatus" name="employmentStatus" [(ngModel)]="isEmployed" />
+            <label for="employmentStatus">Are you employed?</label>
         </div>
 
         <!-- Submit Button -->
-        <button type="submit" [disabled]="!loanForm.valid" class="btn btn-primary">Submit</button>
-
+        <button type="submit" [disabled]="!loanForm.form.valid" class="btn btn-primary">Submit</button>
     </form>
 
     <!-- Eligibility Result -->

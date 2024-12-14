@@ -22,8 +22,6 @@ public class LoanEligibilityController {
 
     // Endpoint to check loan eligibility via POST request
     @PostMapping("/check-customer")
-    @CrossOrigin(origins = "http://localhost:4200") // Allow CORS for this controller from frontend
-
     public ResponseEntity<String> checkLoanEligibility(@RequestBody Customer customerRequest) {
         try {
             // Fetch customer from the database using firstName and lastName
@@ -33,7 +31,14 @@ public class LoanEligibilityController {
             );
 
             if (existingCustomer.isPresent()) {
-                // Use the details from the API request to perform the eligibility check
+                // Update credit score
+                loanEligibilityService.updateCustomerCreditScore(
+                        customerRequest.getFirstName(),
+                        customerRequest.getLastName(),
+                        customerRequest.getCreditScore()
+                );
+
+                // Use the updated details to perform the eligibility check
                 boolean isEligible = loanEligibilityService.checkLoanEligibility(customerRequest);
                 return ResponseEntity.ok(
                         isEligible ? "Customer is eligible for the loan." : "Customer is not eligible for the loan."

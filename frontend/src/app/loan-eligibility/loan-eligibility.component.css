@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f2f5;
@@ -97,29 +98,12 @@ button:hover:not(:disabled) {
     font-size: 12px;
 }
 
-.employment-row {
-    display: flex;
-    flex-direction: column;
-}
-
-.employment-options {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
-    /* Adds space between each option */
-    margin-top: 10px;
-}
-
-.employment-option {
+.employment-status {
     display: flex;
     align-items: center;
-    gap: 5px;
-    /* Adds space between the radio button and the label */
 }
 
-.error-message {
-    margin-top: 10px;
-    color: #ff0000;
-    font-size: 12px;
+.employment-status label {
+    margin-left: 10px;
+    margin-bottom: 0;
 }

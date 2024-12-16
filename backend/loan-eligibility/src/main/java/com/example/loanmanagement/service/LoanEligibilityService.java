@@ -12,6 +12,8 @@ import java.time.LocalDate;  // Import LocalDate for date handling
 import java.time.temporal.ChronoUnit;  // Import ChronoUnit for calculating date differences
 
 import java.util.Optional;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class LoanEligibilityService {
@@ -47,19 +49,22 @@ public class LoanEligibilityService {
 
     // Method to check loan eligibility
     public String checkLoanEligibility(Customer customer) {
+        // List to store failure reasons
+        List<String> failureReasons = new ArrayList<>();
+
         // Check if customer is above 18 years old
         if (customer.getAge() <= 18) {
-            return "Rejected: Customer's age is below 18.";
+            failureReasons.add("Customer's age is below 18.");
         }
 
         // Check if the credit score is below 650
         if (customer.getCreditScore() < 650) {
-            return "Rejected: Customer's credit score is below 650.";
+            failureReasons.add("Customer's credit score is below 650.");
         }
 
         // Check if the total outstanding loan exceeds $10,000
         if (customer.getExistingLoans() > 10000) {
-            return "Rejected: Customer has existing loans exceeding $10,000.";
+            failureReasons.add("Customer has existing loans exceeding $10,000.");
         }
 
         // Calculate the Income-to-Debt Ratio (IDR)
@@ -67,17 +72,25 @@ public class LoanEligibilityService {
 
         // Check if IDR is below 40%
         if (idr >= 0.40) {
-            return "Rejected: Customer's Income-to-Debt Ratio exceeds 40%.";
+            failureReasons.add("Customer's Income-to-Debt Ratio exceeds 40%.");
         }
+
+        // Check if account age is less than 1 year
         long accountAgeInMonths = ChronoUnit.MONTHS.between(customer.getCreateDate(), LocalDate.now());
         if (accountAgeInMonths < 12) {
-            return "Rejected: Customer's account age is less than 1 year.";
+            failureReasons.add("Customer's account age is less than 1 year.");
         }
 
         // Check Employment Status: Must not be Unemployed
         if (customer.getEmploymentStatus().equalsIgnoreCase("Unemployed")) {
-            return "Rejected: Customer is unemployed.";
+            failureReasons.add("Customer is unemployed.");
         }
+
+        // If there are any failure reasons, return them as a joined string
+        if (!failureReasons.isEmpty()) {
+            return "Rejected: " + String.join(" ", failureReasons);
+        }
+
         // If all conditions pass, the customer is eligible
         return "Approved: Customer is eligible for the loan.";
     }

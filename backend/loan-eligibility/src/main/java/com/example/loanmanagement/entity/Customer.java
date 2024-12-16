@@ -107,13 +107,13 @@ public class Customer {
         this.creditScore = creditScore;
     }
 
-    public double getExistingDebts() {
-        return existingDebts;
-    }
-
-    public void setExistingDebts(double existingDebts) {
-        this.existingDebts = existingDebts;
-    }
+//    public double getExistingDebts() {
+//        return existingDebts;
+//    }
+//
+//    public void setExistingDebts(double existingDebts) {
+//        this.existingDebts = existingDebts;
+//    }
 
     public String getEmploymentStatus() {
         return employmentStatus;

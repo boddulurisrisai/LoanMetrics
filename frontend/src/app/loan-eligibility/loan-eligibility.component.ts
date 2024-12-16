@@ -13,39 +13,31 @@ import { HttpClientModule } from '@angular/common/http'; // Import HttpClientMod
 })
 export class LoanEligibilityComponent {
   // Form data
-  firstName: string = '';
-  lastName: string = '';
-  age?: number;
-  annualIncome?: number;
-  debts?: number;
-  creditScore?: number;
-  isEmployed: boolean = false; // Checkbox default
-  eligibilityResult?: string;
+  formData = {
+    firstName: '',
+    lastName: '',
+    age: null,
+    annualIncome: null,
+    creditScore: null,
+    // existingDebts: null,
+    existingLoans: null,
+    totalDebt: null,
+    createDate: null,
+    employmentStatus: '',
+  };
+
+  eligibilityResult?: string; // Holds the result of the eligibility check
 
   // Inject HttpClient
   constructor(private http: HttpClient) {}
 
   // Submit form
   onSubmit(): void {
-    // Map the employment status
-    const employmentStatus = this.isEmployed ? 'Employed' : 'Unemployed';
-
-    // Prepare the customer data
-    const customerData = {
-      firstName: this.firstName,
-      lastName: this.lastName,
-      age: this.age,
-      annualIncome: this.annualIncome,
-      creditScore: this.creditScore,
-      existingDebts: this.debts,
-      employmentStatus: employmentStatus,
-    };
-
-    console.log('Sending customer data:', customerData);
+    console.log('Sending customer data:', this.formData);
 
     // Send POST request to backend
     this.http
-      .post('http://localhost:8080/api/loans/check-customer', customerData, { responseType: 'text' })
+      .post('http://localhost:8080/api/loans/check-customer', this.formData, { responseType: 'text' })
       .subscribe(
         (response: string) => {
           console.log('Response received:', response);

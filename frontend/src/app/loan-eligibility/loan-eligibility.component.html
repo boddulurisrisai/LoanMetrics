@@ -28,6 +28,7 @@
         <!-- Annual Income -->
         <div class="form-group">
             <label for="annualIncome">Annual Income</label>
+            <small class="form-text text-muted">* Should be positive</small>
             <input type="number" id="annualIncome" name="annualIncome" [(ngModel)]="formData.annualIncome" required
                 class="form-control" placeholder="Enter annual income" />
             <div *ngIf="loanForm.submitted && !formData.annualIncome" class="error-message">Annual income is required.
@@ -37,6 +38,7 @@
         <!-- Credit Score -->
         <div class="form-group">
             <label for="creditScore">Credit Score</label>
+            <small class="form-text text-muted">* Credit score should be between 300 and 850.</small>
             <input type="number" id="creditScore" name="creditScore" [(ngModel)]="formData.creditScore" required
                 class="form-control" placeholder="Enter credit score" />
             <div *ngIf="loanForm.submitted && !formData.creditScore" class="error-message">Credit score is required.
@@ -64,6 +66,7 @@
         <!-- Total Debt -->
         <div class="form-group">
             <label for="totalDebt">Total Debt</label>
+            <small class="form-text text-muted">* Should be positive</small>
             <input type="number" id="totalDebt" name="totalDebt" [(ngModel)]="formData.totalDebt" required
                 class="form-control" placeholder="Enter total debt" />
             <div *ngIf="loanForm.submitted && !formData.totalDebt" class="error-message">Total debt is required.</div>

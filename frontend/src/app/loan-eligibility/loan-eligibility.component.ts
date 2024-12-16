@@ -27,6 +27,7 @@ export class LoanEligibilityComponent {
   };
 
   eligibilityResult?: string; // Holds the result of the eligibility check
+  splitEligibilityResult: string[] = []; // Holds the split string
 
   // Inject HttpClient
   constructor(private http: HttpClient) {}
@@ -42,12 +43,21 @@ export class LoanEligibilityComponent {
         (response: string) => {
           console.log('Response received:', response);
           this.eligibilityResult = response; // Display plain text response
+          // Split the result based on both '.' and ':' and filter out empty or whitespace-only strings
+          this.splitEligibilityResult = response
+            .split(/[.:]/) // Split by '.' or ':'
+            .map(item => item.trim()) // Remove extra spaces
+            .filter(item => item.length > 0); // Filter out empty strings
         },
         (error: HttpErrorResponse) => {
           console.error('Error occurred:', error);
           // Check if error contains a text message
           if (typeof error.error === 'string') {
             this.eligibilityResult = error.error; // Display the error message from the server
+            this.splitEligibilityResult = error.error
+              .split(/[.:]/)
+              .map(item => item.trim())
+              .filter(item => item.length > 0); // Filter empty strings
           } else {
             this.eligibilityResult = 'An unexpected error occurred. Please try again later.';
           }

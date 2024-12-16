@@ -10,16 +10,19 @@ public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id; // Unique identifier for each customer
+    private int id;
 
-    private String firstName; // Customer's first name
-    private String lastName; // Customer's last name
-    private String email; // Customer's email address
-    private int age; // Customer's age
-    private double annualIncome; // Customer's annual income
-    private int creditScore; // Customer's credit score
-    private double existingDebts; // Existing debts of the customer
-    private String employmentStatus; // Customer's employment status (e.g., "Employed", "Unemployed")
+    private String firstName;
+    private String lastName;
+    private String email;
+    private int age;
+    private double annualIncome; // This represents the customer's annual income
+    private int creditScore;
+    private double existingDebts;
+    private String employmentStatus;
+
+    private double existingLoans;
+    private double totalDebt;
 
     // Default constructor
     public Customer() {
@@ -27,7 +30,7 @@ public class Customer {
 
     // Constructor to initialize the fields
     public Customer(String firstName, String lastName, String email, int age, double annualIncome,
-                    int creditScore, double existingDebts, String employmentStatus) {
+                    int creditScore, double existingDebts, String employmentStatus, double existingLoans, double totalDebt) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -36,9 +39,11 @@ public class Customer {
         this.creditScore = creditScore;
         this.existingDebts = existingDebts;
         this.employmentStatus = employmentStatus;
+        this.existingLoans = existingLoans;
+        this.totalDebt = totalDebt;
     }
 
-    // Getters and Setters for each field
+    // Getters and Setters
 
     public int getId() {
         return id;
@@ -112,6 +117,24 @@ public class Customer {
         this.employmentStatus = employmentStatus;
     }
 
+    public double getExistingLoans() {
+        return existingLoans;
+    }
+
+    public void setExistingLoans(double existingLoans) {
+        this.existingLoans = existingLoans;
+    }
+
+    public double getTotalDebt() {
+        return totalDebt;
+    }
+
+    public void setTotalDebt(double totalDebt) {
+        this.totalDebt = totalDebt;
+    }
+
+
+
     // Optional: Override toString() method for debugging or logging purposes
     @Override
     public String toString() {
@@ -125,6 +148,8 @@ public class Customer {
                 ", creditScore=" + creditScore +
                 ", existingDebts=" + existingDebts +
                 ", employmentStatus='" + employmentStatus + '\'' +
+                ", existingLoans=" + existingLoans +
+                ", totalDebt=" + totalDebt +
                 '}';
     }
 }

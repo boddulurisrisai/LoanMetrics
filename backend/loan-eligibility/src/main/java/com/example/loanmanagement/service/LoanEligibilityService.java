@@ -5,50 +5,62 @@ import com.example.loanmanagement.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+
 
 import java.util.Optional;
 
 @Service
 public class LoanEligibilityService {
-
-    private final CustomerRepository customerRepository;
+    private static final Logger logger = LogManager.getLogger(LoanEligibilityService.class);  // Logger initialization
 
     @Autowired
-    public LoanEligibilityService(CustomerRepository customerRepository) {
-        this.customerRepository = customerRepository;
-    }
-
-    // Method to fetch customer by first name and last name
+    private CustomerRepository customerRepository;
+    // Method to fetch customer by name (this should fetch from your database)
     public Optional<Customer> getCustomerByName(String firstName, String lastName) {
-        return customerRepository.findByFirstNameAndLastName(firstName, lastName);
+        logger.info("Searching for customer with first name: " + firstName + " and last name: " + lastName);
+        // Retrieve customer from the database
+        Optional<Customer> customer = customerRepository.findByFirstNameAndLastName(firstName, lastName);
+        if (customer.isPresent()) {
+            logger.info("Customer found: " + customer.get());
+        } else {
+            logger.warn("No customer found with the given name.");
+        }
+        return customer;
     }
 
-    // Method to update the credit score using custom query
-    @Transactional
-    public void updateCustomerCreditScore(String firstName, String lastName, int newCreditScore) {
-        customerRepository.updateCreditScoreByName(firstName, lastName, newCreditScore);
+    // Method to update customer credit score (this should update the database)
+    public void updateCustomerCreditScore(String firstName, String lastName, double creditScore) {
+        // Implement logic to update the credit score of the customer in the database
     }
 
-    // Loan eligibility check logic
-    public boolean checkLoanEligibility(Customer customer) {
-        // Loan eligibility criteria
+    // Method to check loan eligibility
+    public String checkLoanEligibility(Customer customer) {
+        // Check if customer is above 18 years old
+        if (customer.getAge() <= 18) {
+            return "Rejected: Customer's age is below 18.";
+        }
+
+        // Check if the credit score is below 650
         if (customer.getCreditScore() < 650) {
-            return false;
-        }
-        if (customer.getAnnualIncome() < 30000) {
-            return false;
-        }
-        if (customer.getExistingDebts() / customer.getAnnualIncome() > 0.40) {
-            return false;
-        }
-        if (customer.getAge() < 21) {
-            return false;
-        }
-        if ("Unemployed".equalsIgnoreCase(customer.getEmploymentStatus())) {
-            return false;
+            return "Rejected: Customer's credit score is below 650.";
         }
 
-        // If all criteria are satisfied
-        return true;
+        // Check if the total outstanding loan exceeds $10,000
+        if (customer.getExistingLoans() > 10000) {
+            return "Rejected: Customer has existing loans exceeding $10,000.";
+        }
+
+        // Calculate the Income-to-Debt Ratio (IDR)
+        double idr = customer.getTotalDebt() / customer.getAnnualIncome();
+
+        // Check if IDR is below 40%
+        if (idr >= 0.40) {
+            return "Rejected: Customer's Income-to-Debt Ratio exceeds 40%.";
+        }
+
+        // If all conditions pass, the customer is eligible
+        return "Approved: Customer is eligible for the loan.";
     }
 }

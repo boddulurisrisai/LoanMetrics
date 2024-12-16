@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDate;  // Import LocalDate
 
 @Entity
 public class Customer {
@@ -24,8 +25,12 @@ public class Customer {
     private double existingLoans;
     private double totalDebt;
 
+    private LocalDate createDate;  // This represents the account creation date
+
     // Default constructor
     public Customer() {
+        // Initialize createDate with current date
+        this.createDate = LocalDate.now();
     }
 
     // Constructor to initialize the fields
@@ -41,6 +46,7 @@ public class Customer {
         this.employmentStatus = employmentStatus;
         this.existingLoans = existingLoans;
         this.totalDebt = totalDebt;
+        this.createDate = LocalDate.now();  // Optionally, initialize here as well
     }
 
     // Getters and Setters
@@ -133,7 +139,13 @@ public class Customer {
         this.totalDebt = totalDebt;
     }
 
+    public LocalDate getCreateDate() {
+        return createDate;
+    }
 
+    public void setCreateDate(LocalDate createDate) {
+        this.createDate = createDate;
+    }
 
     // Optional: Override toString() method for debugging or logging purposes
     @Override
@@ -150,6 +162,7 @@ public class Customer {
                 ", employmentStatus='" + employmentStatus + '\'' +
                 ", existingLoans=" + existingLoans +
                 ", totalDebt=" + totalDebt +
+                ", createDate=" + createDate +
                 '}';
     }
 }

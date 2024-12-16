@@ -8,6 +8,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
+import java.time.LocalDate;  // Import LocalDate for date handling
+import java.time.temporal.ChronoUnit;  // Import ChronoUnit for calculating date differences
 
 import java.util.Optional;
 
@@ -30,10 +32,18 @@ public class LoanEligibilityService {
         return customer;
     }
 
-    // Method to update customer credit score (this should update the database)
+    @Transactional // Ensure a transaction for custom query
     public void updateCustomerCreditScore(String firstName, String lastName, double creditScore) {
-        // Implement logic to update the credit score of the customer in the database
+        try {
+            customerRepository.updateCreditScoreByName(firstName, lastName, (int) creditScore);
+            logger.info("Updated credit score for customer: {} {}", firstName, lastName);
+        } catch (Exception e) {
+            logger.error("Error updating credit score: {}", e.getMessage());
+            throw e; // Rethrow the exception to ensure rollback
+        }
     }
+
+
 
     // Method to check loan eligibility
     public String checkLoanEligibility(Customer customer) {
@@ -59,7 +69,15 @@ public class LoanEligibilityService {
         if (idr >= 0.40) {
             return "Rejected: Customer's Income-to-Debt Ratio exceeds 40%.";
         }
+        long accountAgeInMonths = ChronoUnit.MONTHS.between(customer.getCreateDate(), LocalDate.now());
+        if (accountAgeInMonths < 12) {
+            return "Rejected: Customer's account age is less than 1 year.";
+        }
 
+        // Check Employment Status: Must not be Unemployed
+        if (customer.getEmploymentStatus().equalsIgnoreCase("Unemployed")) {
+            return "Rejected: Customer is unemployed.";
+        }
         // If all conditions pass, the customer is eligible
         return "Approved: Customer is eligible for the loan.";
     }

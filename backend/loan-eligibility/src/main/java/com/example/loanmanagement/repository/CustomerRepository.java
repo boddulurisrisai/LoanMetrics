@@ -8,6 +8,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import com.example.loanmanagement.entity.Customer;
 import java.util.Optional;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -18,9 +19,11 @@ public interface CustomerRepository extends JpaRepository<Customer, Integer> {
     Optional<Customer> findByFirstNameAndLastName(String firstName, String lastName);
 
     // Update credit score by first name and last name
-    @Modifying
+    @Modifying(clearAutomatically = true, flushAutomatically = true)
+    @Transactional
     @Query("UPDATE Customer c SET c.creditScore = :creditScore WHERE c.firstName = :firstName AND c.lastName = :lastName")
     void updateCreditScoreByName(@Param("firstName") String firstName,
                                  @Param("lastName") String lastName,
                                  @Param("creditScore") int creditScore);
+
 }

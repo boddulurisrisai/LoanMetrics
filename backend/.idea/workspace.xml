@@ -5,9 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db19cce1-b9cf-42f2-bec8-ea97b153c0a7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/loan-eligibility/src/main/java/com/example/loanmanagement/service/LoanApplicationHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/loan-eligibility/loan-eligibility.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/loan-eligibility/loan-eligibility.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/loan-eligibility/loan-eligibility.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/loan-eligibility/loan-eligibility.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loan-eligibility/src/test/java/com/example/loanmanagement/controller/LoanEligibilityControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loan-eligibility/src/test/java/com/example/loanmanagement/service/LoanEligibilityServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-eligibility/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-eligibility/src/main/java/com/example/loanmanagement/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/src/main/java/com/example/loanmanagement/entity/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-eligibility/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/classes/com/example/loanmanagement/LoanManagementApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/classes/com/example/loanmanagement/controller/LoanEligibilityController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/classes/com/example/loanmanagement/entity/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/classes/com/example/loanmanagement/repository/CustomerRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/classes/com/example/loanmanagement/service/LoanEligibilityService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/surefire-reports/TEST-com.example.demo.LoanManagementApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/target/surefire-reports/TEST-com.example.demo.LoanManagementApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/surefire-reports/com.example.demo.LoanManagementApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/target/surefire-reports/com.example.demo.LoanManagementApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/test-classes/com/example/demo/LoanManagementApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/target/test-classes/com/example/demo/LoanManagementApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +33,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -25,16 +44,108 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/srisaibodduluri/Desktop/Sanav/LoanMetrics/backend&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.LoanEligibilityControllerTest.executor": "Run",
+    "JUnit.LoanEligibilityControllerTest.testCheckLoanEligibility_CustomerNotFound.executor": "Run",
+    "JUnit.LoanEligibilityControllerTest.testCheckLoanEligibility_ExceptionCase.executor": "Run",
+    "JUnit.LoanEligibilityControllerTest.testCheckLoanEligibility_NegativeCase.executor": "Run",
+    "JUnit.LoanEligibilityControllerTest.testCheckLoanEligibility_PositiveCase.executor": "Run",
+    "JUnit.LoanEligibilityServiceTest.testCheckLoanEligibility_NegativeCase.executor": "Run",
+    "JUnit.LoanEligibilityServiceTest.testCheckLoanEligibility_PositiveCase.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "/Users/srisaibodduluri/Desktop/Sanav/LoanMetrics/backend/loan-eligibility/src/test/java/com/example/loanmanagement/service",
+    "last_opened_file_path": "/Users/srisaibodduluri/Desktop/Sanav/LoanMetrics/backend",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="JUnit.LoanEligibilityServiceTest.testCheckLoanEligibility_NegativeCase">
+    <configuration name="LoanEligibilityControllerTest.testCheckLoanEligibility_CustomerNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="loan-management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.loanmanagement.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.loanmanagement.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.loanmanagement.controller.LoanEligibilityControllerTest" />
+      <option name="METHOD_NAME" value="testCheckLoanEligibility_CustomerNotFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoanEligibilityControllerTest.testCheckLoanEligibility_ExceptionCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="loan-management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.loanmanagement.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.loanmanagement.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.loanmanagement.controller.LoanEligibilityControllerTest" />
+      <option name="METHOD_NAME" value="testCheckLoanEligibility_ExceptionCase" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoanEligibilityControllerTest.testCheckLoanEligibility_NegativeCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="loan-management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.loanmanagement.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.loanmanagement.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.loanmanagement.controller.LoanEligibilityControllerTest" />
+      <option name="METHOD_NAME" value="testCheckLoanEligibility_NegativeCase" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoanEligibilityServiceTest.testCheckLoanEligibility_NegativeCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="loan-management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.loanmanagement.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.loanmanagement.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.loanmanagement.service.LoanEligibilityServiceTest" />
+      <option name="METHOD_NAME" value="testCheckLoanEligibility_NegativeCase" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoanEligibilityServiceTest.testCheckLoanEligibility_PositiveCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="loan-management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.loanmanagement.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.loanmanagement.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.loanmanagement.service.LoanEligibilityServiceTest" />
+      <option name="METHOD_NAME" value="testCheckLoanEligibility_PositiveCase" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="backend" />
       <method v="2">
@@ -46,6 +157,15 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.LoanEligibilityServiceTest.testCheckLoanEligibility_NegativeCase" />
+        <item itemvalue="JUnit.LoanEligibilityServiceTest.testCheckLoanEligibility_PositiveCase" />
+        <item itemvalue="JUnit.LoanEligibilityControllerTest.testCheckLoanEligibility_ExceptionCase" />
+        <item itemvalue="JUnit.LoanEligibilityControllerTest.testCheckLoanEligibility_CustomerNotFound" />
+        <item itemvalue="JUnit.LoanEligibilityControllerTest.testCheckLoanEligibility_NegativeCase" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -57,5 +177,25 @@
       <updated>1734118237635</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/loan-eligibility/src/test/java/com/example/loanmanagement/controller/LoanEligibilityControllerTest.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/loan-eligibility/src/test/java/com/example/loanmanagement/controller/LoanEligibilityControllerTest.java</url>
+          <line>96</line>
+          <properties class="com.example.loanmanagement.controller.LoanEligibilityControllerTest" method="testCheckLoanEligibility_ExceptionCase">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

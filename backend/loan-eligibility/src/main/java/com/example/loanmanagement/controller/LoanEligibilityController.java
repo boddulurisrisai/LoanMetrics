@@ -7,8 +7,9 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+import com.example.loanmanagement.entity.LoanRequest;
 import java.util.Optional;
+
 
 @RestController
 @RequestMapping("/api/loans")
@@ -67,4 +68,40 @@ public class LoanEligibilityController {
             return ResponseEntity.status(500).body("Error occurred while checking eligibility.");
         }
     }
+
+    @PostMapping("/calculate-max-loan")
+    public ResponseEntity<String> calculateMaxLoanAmount(@RequestBody LoanRequest loanRequest) {
+        try {
+            // Log the received data for debugging
+            logger.info("Received loan calculation request: Total Debt: "
+                    + loanRequest.getTotalDebt() + ", Annual Income: "
+                    + loanRequest.getAnnualIncome() + ", Credit Score: "
+                    + loanRequest.getCreditScore());
+
+            // Call service method to calculate the loan amount
+            double maxLoanAmount = loanEligibilityService.calculateMaxLoanAmount(
+                    loanRequest.getTotalDebt(),
+                    loanRequest.getAnnualIncome(),
+                    loanRequest.getCreditScore()
+            );
+
+            // Return the calculated loan amount as a response
+            return ResponseEntity.ok("Maximum loan amount you qualify for: " + maxLoanAmount);
+        } catch (Exception e) {
+            // Log and handle any unexpected errors
+            logger.error("Error occurred while calculating maximum loan amount: ", e);
+            return ResponseEntity.status(500).body("Error occurred while processing the loan calculation.");
+        }
+    }
+
+
+
+    // Helper method to calculate the Income to Debt Ratio (IDR)
+    private double calculateIDR(double totalDebt, double annualIncome) {
+        if (annualIncome == 0) {
+            throw new IllegalArgumentException("Annual income cannot be zero.");
+        }
+        return totalDebt / annualIncome;
+    }
+
 }

@@ -94,4 +94,39 @@ public class LoanEligibilityService {
         // If all conditions pass, the customer is eligible
         return "Approved: Customer is eligible for the loan.";
     }
+
+    public double calculateMaxLoanAmount(double totalDebt, double annualIncome, double creditScore) {
+        // Prevent division by zero
+        if (annualIncome <= 0) {
+            throw new IllegalArgumentException("Annual income must be greater than 0.");
+        }
+
+        // Calculate the Income-to-Debt Ratio (IDR)
+        double idr = totalDebt / annualIncome;
+
+        // Base loan amount is assumed as twice the annual income
+        double baseLoanAmount = 2 * annualIncome;
+
+        // Calculate credit score factor
+        double creditScoreFactor;
+        if (creditScore >= 750) {
+            creditScoreFactor = 1.2; // Excellent credit score
+        } else if (creditScore >= 650) {
+            creditScoreFactor = 1.1; // Good credit score
+        } else {
+            creditScoreFactor = 1.0; // Fair or poor credit score
+        }
+
+        // Final loan amount based on IDR and credit score factor
+        double loanAmount = baseLoanAmount * (1 - idr) * creditScoreFactor;
+
+        // Ensure loan amount is not negative
+        return Math.max(loanAmount, -(loanAmount));
+    }
+
+
+
+
+
+
 }

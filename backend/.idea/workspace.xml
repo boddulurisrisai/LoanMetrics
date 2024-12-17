@@ -6,13 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="db19cce1-b9cf-42f2-bec8-ea97b153c0a7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/src/main/java/com/example/loanmanagement/controller/LoanEligibilityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/src/main/java/com/example/loanmanagement/controller/LoanEligibilityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/src/main/java/com/example/loanmanagement/service/LoanApplicationHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/src/main/java/com/example/loanmanagement/entity/LoanRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/src/main/java/com/example/loanmanagement/service/LoanEligibilityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/src/main/java/com/example/loanmanagement/service/LoanEligibilityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/classes/com/example/loanmanagement/controller/LoanEligibilityController.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/target/classes/com/example/loanmanagement/controller/LoanEligibilityController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/classes/com/example/loanmanagement/entity/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/target/classes/com/example/loanmanagement/entity/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/classes/com/example/loanmanagement/service/LoanEligibilityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/target/classes/com/example/loanmanagement/service/LoanEligibilityService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

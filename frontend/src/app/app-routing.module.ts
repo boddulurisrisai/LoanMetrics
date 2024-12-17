@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoanEligibilityComponent } from './loan-eligibility/loan-eligibility.component';
+import { MaxloanComponent } from './maxloan/maxloan.component';
 
 const routes: Routes = [
-  { path: '', component: LoanEligibilityComponent }, // Default route
-  { path: 'loan-eligibility', component: LoanEligibilityComponent } // Explicit route
+  { path: '', redirectTo: '/home', pathMatch: 'full' }, // Default route
+  { path: 'loan-eligibility', component: LoanEligibilityComponent },
+  { path: 'maxloan', component: MaxloanComponent },  // Route for maxloan page
 ];
 
 @NgModule({

@@ -112,8 +112,12 @@
     </form>
 
     <!-- Eligibility Result -->
-    <div *ngIf="eligibilityResult" class="result">
+    <!-- <div *ngIf="eligibilityResult" class="result">
         <h3>Your Eligibility Result:</h3>
         <p>{{ eligibilityResult }}</p>
+    </div> -->
+    <div *ngIf="eligibilityResult" class="result">
+        <h3>Your Eligibility Result:</h3>
+        <p *ngFor="let part of splitEligibilityResult">- {{ part }}</p>
     </div>
 </div>

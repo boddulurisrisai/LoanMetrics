@@ -7,7 +7,7 @@ body {
     color: #333;
 }
 
-.loan-eligibility-container {
+.container {
     max-width: 700px;
     margin: 50px auto;
     padding: 30px;
@@ -17,7 +17,7 @@ body {
     color: #333;
 }
 
-h1 {
+h2 {
     text-align: center;
     color: #a83b0d;
     margin-bottom: 30px;
@@ -35,8 +35,7 @@ label {
 }
 
 input[type="text"],
-input[type="number"],
-input[type="checkbox"] {
+input[type="number"] {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -45,11 +44,6 @@ input[type="checkbox"] {
     background-color: #f9f9f9;
     font-size: 14px;
     transition: border-color 0.3s ease;
-}
-
-input[type="checkbox"] {
-    width: auto;
-    margin-right: 10px;
 }
 
 input[type="text"]:focus,
@@ -93,17 +87,11 @@ button:hover:not(:disabled) {
     color: #0056b3;
 }
 
-.error-message {
-    color: #ff0000;
-    font-size: 12px;
-}
-
-.employment-status {
-    display: flex;
-    align-items: center;
-}
-
-.employment-status label {
-    margin-left: 10px;
-    margin-bottom: 0;
+.error {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fdecea;
+    border-left: 5px solid #ff0000;
+    border-radius: 5px;
+    color: #d93025;
 }

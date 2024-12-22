@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db19cce1-b9cf-42f2-bec8-ea97b153c0a7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/maxloan/maxloan.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/maxloan/maxloan.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,27 +30,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.LoanEligibilityControllerTest.executor": "Run",
-    "JUnit.LoanEligibilityControllerTest.testCheckLoanEligibility_CustomerNotFound.executor": "Run",
-    "JUnit.LoanEligibilityControllerTest.testCheckLoanEligibility_ExceptionCase.executor": "Run",
-    "JUnit.LoanEligibilityControllerTest.testCheckLoanEligibility_NegativeCase.executor": "Run",
-    "JUnit.LoanEligibilityControllerTest.testCheckLoanEligibility_PositiveCase.executor": "Run",
-    "JUnit.LoanEligibilityServiceTest.testCheckLoanEligibility_NegativeCase.executor": "Run",
-    "JUnit.LoanEligibilityServiceTest.testCheckLoanEligibility_PositiveCase.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "/Users/srisaibodduluri/Desktop/Sanav/LoanMetrics/backend/loan-eligibility/src/test/java/com/example/loanmanagement/service",
-    "last_opened_file_path": "/Users/srisaibodduluri/Desktop/Sanav/LoanMetrics/backend",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.LoanEligibilityControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LoanEligibilityControllerTest.testCheckLoanEligibility_CustomerNotFound.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LoanEligibilityControllerTest.testCheckLoanEligibility_ExceptionCase.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LoanEligibilityControllerTest.testCheckLoanEligibility_NegativeCase.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LoanEligibilityControllerTest.testCheckLoanEligibility_PositiveCase.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LoanEligibilityServiceTest.testCheckLoanEligibility_NegativeCase.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LoanEligibilityServiceTest.testCheckLoanEligibility_PositiveCase.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/srisaibodduluri/Desktop/Sanav/LoanMetrics/backend/loan-eligibility/src/test/java/com/example/loanmanagement/service&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/srisaibodduluri/Desktop/Sanav/LoanMetrics/backend&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.LoanEligibilityServiceTest.testCheckLoanEligibility_NegativeCase">
     <configuration name="LoanEligibilityControllerTest.testCheckLoanEligibility_CustomerNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="loan-management" />

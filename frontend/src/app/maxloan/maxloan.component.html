@@ -19,11 +19,15 @@
         <button type="submit">Calculate Max Loan Amount</button>
     </form>
 
-    <div *ngIf="maxLoanAmount !== null" class="result">
-        <h3>Maximum Loan Amount: {{ maxLoanAmount | currency }}</h3>
+    <div class="result">
+        <h3>Response:</h3>
+        <p>{{ eligibilityResult }}</p>
+
+
     </div>
 
     <div *ngIf="errorMessage" class="error">
         <p>{{ errorMessage }}</p>
     </div>
+
 </div>

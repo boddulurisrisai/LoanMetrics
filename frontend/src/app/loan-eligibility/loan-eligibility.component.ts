@@ -38,7 +38,7 @@ export class LoanEligibilityComponent {
 
     // Send POST request to backend
     this.http
-      .post('http://localhost:8080/api/loans/check-customer', this.formData, { responseType: 'text' })
+      .post('http://https://f7ec-2600-6c56-4300-4b-94c7-e462-33eb-3eec.ngrok-free.app/api/loans/check-customer', this.formData, { responseType: 'text' })
       .subscribe(
         (response: string) => {
           console.log('Response received:', response);

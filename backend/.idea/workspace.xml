@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db19cce1-b9cf-42f2-bec8-ea97b153c0a7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/src/main/java/com/example/loanmanagement/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/src/main/java/com/example/loanmanagement/repository/CustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/src/test/java/com/example/demo/LoanManagementApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/src/test/java/com/example/loanmanagement/controller/LoanEligibilityControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/src/test/java/com/example/loanmanagement/service/LoanEligibilityServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/loan-eligibility/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/surefire-reports/TEST-com.example.demo.LoanManagementApplicationTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/surefire-reports/TEST-com.example.loanmanagement.controller.LoanEligibilityControllerTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/surefire-reports/TEST-com.example.loanmanagement.service.LoanEligibilityServiceTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/surefire-reports/com.example.demo.LoanManagementApplicationTests.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/surefire-reports/com.example.loanmanagement.controller.LoanEligibilityControllerTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/surefire-reports/com.example.loanmanagement.service.LoanEligibilityServiceTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/test-classes/com/example/demo/LoanManagementApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/test-classes/com/example/loanmanagement/controller/LoanEligibilityControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-eligibility/target/test-classes/com/example/loanmanagement/service/LoanEligibilityServiceTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/app/loan-eligibility/loan-eligibility.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/loan-eligibility/loan-eligibility.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/app/maxloan/maxloan.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/maxloan/maxloan.component.ts" afterDir="false" />
     </list>

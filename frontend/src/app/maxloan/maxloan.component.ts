@@ -26,7 +26,7 @@ export class MaxloanComponent {
   errorMessage: string = '';
 
   // API endpoint
-  private apiUrl = 'https://1ef7-2600-6c56-4300-4b-94c7-e462-33eb-3eec.ngrok-free.app/api/loans/calculate-max-loan';
+  private apiUrl = 'http://localhost:8080/api/loans/calculate-max-loan';
 
   constructor(private http: HttpClient) {}
 

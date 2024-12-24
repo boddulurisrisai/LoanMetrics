@@ -41,7 +41,7 @@ This project is a Loan Management System that helps manage customer loan applica
 ### Prerequisites
 
 - Docker
-- Node.js (latest version recommended)
+- Node.js
 - Angular 14
 - Java 11
 - Maven
@@ -212,10 +212,10 @@ Use Postman to test the API endpoints.
 
 Here is a screenshot of the Loan Eligibility Form:
 
-![Loan Eligibility Form Screenshot](screenshots/Screenshot2.png)
 ![Loan Eligibility Form Screenshot](screenshots/Screenshot1.png)
-![Loan Eligibility Form Screenshot](screenshots/Screenshot3.png)
+![Loan Eligibility Form Screenshot](screenshots/Screenshot2.png)
 ![Loan Eligibility Form Screenshot](screenshots/Screenshot4.png)
+![Loan Eligibility Form Screenshot](screenshots/Screenshot5.png)
 
 ## Max Loan Amount Calculator Form
 
@@ -223,4 +223,6 @@ A new page has been added to allow users to calculate the maximum loan amount th
 
 Here is a screenshot of the Max Loan Amount Calculator Form:
 
-![Max Loan Calculator Screenshot](screenshots/MaxLoanCalculator.png)
+![Max Loan Calculator Screenshot](screenshots/Screenshot6.png)
+
+![Max Loan Calculator Screenshot](screenshots/Screenshot7.png)

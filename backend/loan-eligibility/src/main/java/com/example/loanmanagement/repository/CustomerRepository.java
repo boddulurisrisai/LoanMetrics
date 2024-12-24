@@ -10,7 +10,6 @@ import com.example.loanmanagement.entity.Customer;
 import java.util.Optional;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Optional;
 
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer, Integer> {
